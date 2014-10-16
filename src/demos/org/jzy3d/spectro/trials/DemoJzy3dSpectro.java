@@ -44,7 +44,7 @@ public class DemoJzy3dSpectro extends AbstractAnalysis {
         // Create a chart with time and frequency axes
         chart = AWTChartComponentFactory.chart(Quality.Advanced, getCanvasType());
         chart.getScene().getGraph().add(surface);
-        make3d(chart);
+        make2d(chart);
     }
 
     public void axeLabels(Chart chart) {
