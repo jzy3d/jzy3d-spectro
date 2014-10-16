@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/44/trunk/src/net/bluecow/spectro
+END
+version.properties
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/40/trunk/src/net/bluecow/spectro/version.properties
+END
+UndoManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/34/trunk/src/net/bluecow/spectro/UndoManager.java
+END
+OverlapBuffer.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/18/trunk/src/net/bluecow/spectro/OverlapBuffer.java
+END
+VorbisWindowFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/18/trunk/src/net/bluecow/spectro/VorbisWindowFunction.java
+END
+ValueColorizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/29/trunk/src/net/bluecow/spectro/ValueColorizer.java
+END
+ClipPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/44/trunk/src/net/bluecow/spectro/ClipPanel.java
+END
+NullWindowFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/18/trunk/src/net/bluecow/spectro/NullWindowFunction.java
+END
+Util.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/44/trunk/src/net/bluecow/spectro/Util.java
+END
+PlaybackPositionEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/36/trunk/src/net/bluecow/spectro/PlaybackPositionEvent.java
+END
+WindowFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/18/trunk/src/net/bluecow/spectro/WindowFunction.java
+END
+FFT.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/18/trunk/src/net/bluecow/spectro/FFT.java
+END
+MemoryMonitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/35/trunk/src/net/bluecow/spectro/MemoryMonitor.java
+END
+PlaybackPositionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/36/trunk/src/net/bluecow/spectro/PlaybackPositionListener.java
+END
+AudioFileUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/39/trunk/src/net/bluecow/spectro/AudioFileUtils.java
+END
+PlayerThread.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/41/trunk/src/net/bluecow/spectro/PlayerThread.java
+END
+Version.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/18/trunk/src/net/bluecow/spectro/Version.java
+END
+ClipDataEdit.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/34/trunk/src/net/bluecow/spectro/ClipDataEdit.java
+END
+LogManager.properties
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/43/trunk/src/net/bluecow/spectro/LogManager.properties
+END
+Clip.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/44/trunk/src/net/bluecow/spectro/Clip.java
+END
+PositionReadout.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/34/trunk/src/net/bluecow/spectro/PositionReadout.java
+END
+SpectroEditSession.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/44/trunk/src/net/bluecow/spectro/SpectroEditSession.java
+END
+ClipDataChangeEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/25/trunk/src/net/bluecow/spectro/ClipDataChangeEvent.java
+END
+Frame.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/44/trunk/src/net/bluecow/spectro/Frame.java
+END
+LogarithmicColorizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/34/trunk/src/net/bluecow/spectro/LogarithmicColorizer.java
+END
+ClipDataChangeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/20/trunk/src/net/bluecow/spectro/ClipDataChangeListener.java
+END
