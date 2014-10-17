@@ -16,7 +16,7 @@ import org.jzy3d.plot3d.primitives.axes.layout.renderers.ElapsedTimeTickRenderer
 import org.jzy3d.plot3d.rendering.canvas.Quality;
 import org.jzy3d.plot3d.rendering.view.ViewportMode;
 import org.jzy3d.plot3d.rendering.view.modes.ViewPositionMode;
-import org.jzy3d.spectro.primitives.FFTSurface;
+import org.jzy3d.spectro.primitives.SpectrumSurface;
 
 /**
  * Demonstrate a spectrogram using <a href="https://code.google.com/p/spectro-edit/">Spectro Edit</a>.
@@ -37,7 +37,7 @@ public class DemoJzy3dSpectro extends AbstractAnalysis {
 
         // Create a drawable clip
         int maxFreqId = 50;
-        FFTSurface surface = new FFTSurface(clip, maxFreqId);
+        SpectrumSurface surface = new SpectrumSurface(new SpectrumModelSpectro(clip), maxFreqId);
         surface.setFaceDisplayed(true);
         surface.setWireframeDisplayed(false);
 
