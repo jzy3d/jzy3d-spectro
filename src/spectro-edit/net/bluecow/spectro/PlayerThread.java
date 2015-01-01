@@ -90,6 +90,10 @@ public class PlayerThread extends Thread {
         this.clip = clip;
     }
     
+    public Clip getClip(){
+        return clip;
+    }
+    
     @Override
     public void run() {
         if (in == null) {

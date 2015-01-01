@@ -57,7 +57,7 @@ public class SpectrumSurface extends AbstractGeometry {
 
         // bounding box
         rangeX = new Range(0, frameCount);
-        rangeY = new Range(0, maxFreqValue);
+        rangeY = new Range(0, (float)maxFreqValue);
         rangeZ = processSpectralValuesRange(spectrum);
         if (absoluteZ)
             rangeZ.setMin(0);
@@ -149,14 +149,14 @@ public class SpectrumSurface extends AbstractGeometry {
     }
 
     protected Range processSpectralValuesRange(SpectrumModel spectrum) {
-        double min = Double.MAX_VALUE;
-        double max = Double.MIN_VALUE;
+        float min = Float.MAX_VALUE;
+        float max = Float.MIN_VALUE;
 
         for (int framId = 0; framId < frameCount; framId++) {
             //Frame frame = clip.getFrame(framId);
 
             for (int freqId = 0; freqId < frameWidth; freqId++) {
-                double value = spectrum.getEnergy(framId, freqId);
+                float value = (float)spectrum.getEnergy(framId, freqId);
 
                 if (min > value) {
                     min = value;

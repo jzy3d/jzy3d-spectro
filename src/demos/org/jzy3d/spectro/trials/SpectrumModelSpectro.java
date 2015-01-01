@@ -1,8 +1,8 @@
 package org.jzy3d.spectro.trials;
 
-import org.jzy3d.spectro.primitives.SpectrumModel;
-
 import net.bluecow.spectro.Clip;
+
+import org.jzy3d.spectro.primitives.SpectrumModel;
 
 public class SpectrumModelSpectro implements SpectrumModel{
     protected Clip clip;
@@ -20,6 +20,20 @@ public class SpectrumModelSpectro implements SpectrumModel{
     public int getFrameWidth() {
         return clip.getFrame(0).getLength();
     }
+    
+    public double getFrequencyAt(int index){
+        return  index * sampleRate / getFrameWidth();
+    }
+    
+    public double[] getFrequencies(){
+        double[] frequencies = new double[getFrameWidth()];
+        for (int i = 0; i < frequencies.length; i++) {
+            frequencies[i] = getFrequencyAt(i);
+        }
+        return frequencies;
+    }
+    
+    public double sampleRate = 44100;
 
     @Override
     public double getEnergy(int frameId, int frequencyId) {
