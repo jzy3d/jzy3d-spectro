@@ -101,6 +101,7 @@ public class ToolboxPanel {
         toolButtonPanel.setBorder(new TitleBorder("Tools"));
 
         ActionListener actionHandler = new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (currentTool != null) {
                     currentTool.deactivate();

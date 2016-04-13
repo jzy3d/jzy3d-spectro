@@ -61,6 +61,7 @@ public class PaintbrushTool implements Tool {
         
         brushSlider.setOpaque(false);
         brushSlider.addChangeListener(new ChangeListener() {
+            @Override
             public void stateChanged(ChangeEvent e) {
                 brushSizeLabel.setText("Paintbrush size: " + brushSlider.getValue());
             }
@@ -68,10 +69,12 @@ public class PaintbrushTool implements Tool {
         brushSlider.setValue(5);
     }
     
+    @Override
     public String getName() {
         return "Paintbrush";
     }
     
+    @Override
     public void activate(SpectroEditSession session) {
         clipPanel = session.getClipPanel();
         clip = clipPanel.getClip();
@@ -80,6 +83,7 @@ public class PaintbrushTool implements Tool {
         clipPanel.addMouseMotionListener(mouseHandler);
     }
 
+    @Override
     public void deactivate() {
         clipPanel.removeMouseListener(mouseHandler);
         clipPanel.removeMouseMotionListener(mouseHandler);
@@ -89,6 +93,7 @@ public class PaintbrushTool implements Tool {
     
     private class PaintbrushMouseHandler implements MouseMotionListener, MouseListener {
 
+        @Override
         public void mouseDragged(MouseEvent e) {
             Point p = clipPanel.toClipCoords(e.getPoint());
             int radius = brushSlider.getValue();
@@ -106,33 +111,40 @@ public class PaintbrushTool implements Tool {
             clip.endEdit();
         }
 
+        @Override
         public void mouseMoved(MouseEvent e) {
             // maybe draw an outline of the paintbrush
         }
 
+        @Override
         public void mouseClicked(MouseEvent e) {
             // don't care?
         }
 
+        @Override
         public void mouseEntered(MouseEvent e) {
             // don't care?
         }
 
+        @Override
         public void mouseExited(MouseEvent e) {
             // don't care?
         }
 
+        @Override
         public void mousePressed(MouseEvent e) {
             clip.beginCompoundEdit("Painting");
             mouseDragged(e);
         }
 
+        @Override
         public void mouseReleased(MouseEvent e) {
             clip.endCompoundEdit();
         }
         
     }
 
+    @Override
     public JComponent getSettingsPanel() {
         return settingsPanel;
     }

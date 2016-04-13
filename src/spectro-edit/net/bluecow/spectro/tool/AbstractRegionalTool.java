@@ -45,6 +45,7 @@ public abstract class AbstractRegionalTool implements Tool {
      * initial region, which could be null. If you override this method, be sure
      * to invoke this one with a super.activate(session) in your override.
      */
+    @Override
     public void activate(SpectroEditSession session) {
         this.clipPanel = session.getClipPanel();
         clip = clipPanel.getClip();
@@ -59,6 +60,7 @@ public abstract class AbstractRegionalTool implements Tool {
      * method, be sure to invoke this one with a super.deactivate(session) in your
      * override.
      */
+    @Override
     public void deactivate() {
         clipPanel.removePropertyChangeListener("region", clipEventHandler);
         clip = null;
@@ -85,6 +87,7 @@ public abstract class AbstractRegionalTool implements Tool {
      */
     private final PropertyChangeListener clipEventHandler = new PropertyChangeListener() {
 
+        @Override
         public void propertyChange(PropertyChangeEvent evt) {
             if ("region".equals(evt.getPropertyName())) {
                 regionChanged((Rectangle) evt.getNewValue());

@@ -33,6 +33,10 @@ import javax.swing.JRadioButton;
  */
 public class ToolButton extends JRadioButton {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 5554265978410375350L;
     private final Tool tool;
 
     public ToolButton(Tool tool, String iconName, ButtonGroup group) {

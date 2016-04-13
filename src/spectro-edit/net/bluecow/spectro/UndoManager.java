@@ -29,6 +29,10 @@ import javax.swing.undo.UndoableEdit;
 
 public class UndoManager extends javax.swing.undo.UndoManager {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 571305050790134000L;
     private static final Logger logger = Logger.getLogger(UndoManager.class.getName());
     
     public UndoManager() {

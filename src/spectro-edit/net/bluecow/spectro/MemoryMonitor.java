@@ -28,6 +28,7 @@ public class MemoryMonitor {
     private JLabel label = new JLabel();
     
     private ActionListener timerAction = new ActionListener() {
+        @Override
         public void actionPerformed(ActionEvent e) {
             long megabyte = 1024 * 1024;
             long totalMemory = Runtime.getRuntime().totalMemory() / megabyte;

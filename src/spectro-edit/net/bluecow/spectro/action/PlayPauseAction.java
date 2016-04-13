@@ -27,11 +27,18 @@ import net.bluecow.spectro.PlayerThread;
 
 public class PlayPauseAction extends AbstractAction {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 843231161976627517L;
+
     private final PlayerThread playerThread;
     
     private final ChangeListener playerStateHandler = new ChangeListener() {
+        @Override
         public void stateChanged(ChangeEvent e) {
             SwingUtilities.invokeLater(new Runnable() {
+                @Override
                 public void run() {
                     if (playerThread.isPlaying()) {
                         putValue(NAME, "Pause");
@@ -49,6 +56,7 @@ public class PlayPauseAction extends AbstractAction {
         playerThread.addChangeListener(playerStateHandler);
     }
 
+    @Override
     public void actionPerformed(ActionEvent e) {
         if (playerThread.isPlaying()) {
             playerThread.stopPlaying();

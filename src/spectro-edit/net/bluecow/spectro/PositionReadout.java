@@ -45,10 +45,12 @@ public class PositionReadout {
     
     private class MouseHandler implements MouseListener, MouseMotionListener {
 
+        @Override
         public void mouseDragged(MouseEvent e) {
             mouseMoved(e);
         }
 
+        @Override
         public void mouseMoved(MouseEvent e) {
             double rate = cp.getClip().getSamplingRate();
             double fSamples = cp.getClip().getFrameFreqSamples();
@@ -59,14 +61,19 @@ public class PositionReadout {
             label.setEnabled(true);
         }
 
+        @Override
         public void mouseExited(MouseEvent e) {
             label.setText("(No current position)");
             label.setEnabled(false);
         }
         
+        @Override
         public void mouseEntered(MouseEvent e) { /* no op */ }
+        @Override
         public void mouseClicked(MouseEvent e) { /* no op */ }
+        @Override
         public void mousePressed(MouseEvent e) { /* no op */ }
+        @Override
         public void mouseReleased(MouseEvent e) { /* no op */ }
     };
     

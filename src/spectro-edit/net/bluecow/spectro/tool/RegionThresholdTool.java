@@ -48,6 +48,7 @@ public class RegionThresholdTool implements Tool {
 
     private final PropertyChangeListener clipEventHandler = new PropertyChangeListener() {
 
+        @Override
         public void propertyChange(PropertyChangeEvent evt) {
             if ("region".equals(evt.getPropertyName())) {
                 thresholdSlider.setValue(initialThreshold);
@@ -85,6 +86,7 @@ public class RegionThresholdTool implements Tool {
         thresholdSlider.setOpaque(false);
         thresholdSlider.addChangeListener(new ChangeListener() {
 
+            @Override
             public void stateChanged(ChangeEvent e) {
                 if (thresholdSlider.getValueIsAdjusting()) {
                     applyRegionThreshold(thresholdSlider.getCurvedValue());
@@ -98,6 +100,7 @@ public class RegionThresholdTool implements Tool {
         upper = new JCheckBox("Upper Threshold");
         upper.setOpaque(false);
         upper.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 // just re-apply.. the method is sensitive to the state of the checkbox
                 applyRegionThreshold(thresholdSlider.getCurvedValue());
@@ -108,10 +111,12 @@ public class RegionThresholdTool implements Tool {
         settingsPanel.add(Box.createGlue());
     }
 
+    @Override
     public String getName() {
         return "Region Threshold";
     }
     
+    @Override
     public void activate(SpectroEditSession session) {
         this.clipPanel = session.getClipPanel();
         clip = clipPanel.getClip();
@@ -119,6 +124,7 @@ public class RegionThresholdTool implements Tool {
         clipPanel.addPropertyChangeListener("region", clipEventHandler);
     }
 
+    @Override
     public void deactivate() {
         origData = null;
         clipPanel.removePropertyChangeListener("region", clipEventHandler);
@@ -126,6 +132,7 @@ public class RegionThresholdTool implements Tool {
         clipPanel = null;
     }
 
+    @Override
     public JComponent getSettingsPanel() {
         return settingsPanel;
     }

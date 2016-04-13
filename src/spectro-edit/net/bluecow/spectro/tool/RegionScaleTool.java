@@ -40,6 +40,7 @@ public class RegionScaleTool implements Tool {
 
     private final PropertyChangeListener clipEventHandler = new PropertyChangeListener() {
 
+        @Override
         public void propertyChange(PropertyChangeEvent evt) {
             if ("region".equals(evt.getPropertyName())) {
 //                if (origData != null) {
@@ -73,6 +74,7 @@ public class RegionScaleTool implements Tool {
         scaleSlider.setOpaque(false);
         scaleSlider.addChangeListener(new ChangeListener() {
 
+            @Override
             public void stateChanged(ChangeEvent e) {
                 if (scaleSlider.getValueIsAdjusting()) {
                     scaleRegion(scaleSlider.getValue() / 100.0);
@@ -86,10 +88,12 @@ public class RegionScaleTool implements Tool {
         settingsPanel.add(Box.createGlue());
     }
 
+    @Override
     public String getName() {
         return "Scale Region";
     }
     
+    @Override
     public void activate(SpectroEditSession session) {
         this.clipPanel = session.getClipPanel();
         clip = clipPanel.getClip();
@@ -97,6 +101,7 @@ public class RegionScaleTool implements Tool {
         clipPanel.addPropertyChangeListener("region", clipEventHandler);
     }
 
+    @Override
     public void deactivate() {
         if (origData != null) {
 //            clip.endEdit();
@@ -107,6 +112,7 @@ public class RegionScaleTool implements Tool {
         clipPanel = null;
     }
 
+    @Override
     public JComponent getSettingsPanel() {
         return settingsPanel;
     }

@@ -1,8 +1,5 @@
 package org.jzy3d.spectro.primitives;
 
-import javax.media.opengl.GL;
-import javax.media.opengl.GL2;
-
 import org.apache.log4j.Logger;
 import org.jzy3d.colors.Color;
 import org.jzy3d.colors.ColorMapper;
@@ -11,6 +8,9 @@ import org.jzy3d.maths.BoundingBox3d;
 import org.jzy3d.maths.Range;
 import org.jzy3d.plot3d.primitives.AbstractGeometry;
 import org.jzy3d.plot3d.rendering.compat.GLES2CompatUtils;
+
+import com.jogamp.opengl.GL;
+import com.jogamp.opengl.GL2;
 
 /**
  * A drawable spectrum.
@@ -83,6 +83,7 @@ public class SpectrumSurface extends AbstractGeometry {
     }
 
     /** drawing polygons from spectrum values directly */
+    @Override
     public void callPointsForFaceGL2(GL gl) {
         for (int framId = 0; framId < frameCount - 1; framId++) {
             int frameMax = Math.min(spectrum.getFrameWidth() - 1, frameWidth);
@@ -133,6 +134,7 @@ public class SpectrumSurface extends AbstractGeometry {
     }
 
     /** no wireframe */
+    @Override
     public void callPointsForWireframeGL2(GL gl) {
     }
 

@@ -41,6 +41,7 @@ public class VorbisWindowFunction implements WindowFunction {
         logger.finest(String.format("VorbisWindowFunction scalars (size=%d): %s\n", scalars.length, Arrays.toString(scalars)));
     }
     
+    @Override
     public void applyWindow(double[] data) {
         if (data.length != scalars.length) {
             throw new IllegalArgumentException(

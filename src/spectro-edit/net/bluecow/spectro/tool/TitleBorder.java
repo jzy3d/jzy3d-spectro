@@ -46,15 +46,18 @@ public class TitleBorder implements Border {
         return title;
     }
     
+    @Override
     public Insets getBorderInsets(Component c) {
         int height = c.getFontMetrics(getFont(c)).getHeight();
         return new Insets(height, 0, 0, 0);
     }
 
+    @Override
     public boolean isBorderOpaque() {
         return false;
     }
 
+    @Override
     public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
         Graphics2D g2 = (Graphics2D) g;
         Font font = getFont(c);

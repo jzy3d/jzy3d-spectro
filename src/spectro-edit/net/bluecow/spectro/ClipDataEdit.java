@@ -31,6 +31,11 @@ import javax.swing.undo.UndoableEdit;
  */
 public class ClipDataEdit extends AbstractUndoableEdit {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -6725841242875254949L;
+
     private static final Logger logger = Logger.getLogger(ClipDataEdit.class.getName());
     
     private final Clip clip;

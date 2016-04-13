@@ -24,6 +24,10 @@ import net.bluecow.spectro.PlayerThread;
 
 public class RewindAction extends AbstractAction {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -3729335780035360517L;
     private final PlayerThread playerThread;
 
     public RewindAction(PlayerThread playerThread) {
@@ -31,6 +35,7 @@ public class RewindAction extends AbstractAction {
         this.playerThread = playerThread;
     }
 
+    @Override
     public void actionPerformed(ActionEvent e) {
         playerThread.setPlaybackPosition(0);
     }

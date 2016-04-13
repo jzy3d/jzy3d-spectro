@@ -34,6 +34,11 @@ import net.bluecow.spectro.Clip;
 public class SaveAction extends AbstractAction {
 
     /**
+     * 
+     */
+    private static final long serialVersionUID = 5407315586530539270L;
+
+    /**
      * Controls whether or not this action should prompt when the user attempts
      * to overwrite an existing file. The OS X file dialog does this
      * automatically, so this flag causes the overwrite prompt to be suppressed
@@ -54,6 +59,7 @@ public class SaveAction extends AbstractAction {
         }
     }
 
+    @Override
     public void actionPerformed(ActionEvent e) {
         try {
             FileDialog fd;

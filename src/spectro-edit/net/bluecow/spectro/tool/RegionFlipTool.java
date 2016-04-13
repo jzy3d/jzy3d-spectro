@@ -49,6 +49,7 @@ public class RegionFlipTool implements Tool {
         vflipButton.setOpaque(false);
         settingsPanel.add(vflipButton);
         vflipButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 vflipRegion();
             }
@@ -58,6 +59,7 @@ public class RegionFlipTool implements Tool {
         hflipButton.setOpaque(false);
         settingsPanel.add(hflipButton);
         hflipButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 hflipRegion();
             }
@@ -66,21 +68,25 @@ public class RegionFlipTool implements Tool {
         settingsPanel.add(Box.createGlue());
     }
 
+    @Override
     public String getName() {
         return "Flip";
     }
     
+    @Override
     public void activate(SpectroEditSession session) {
         this.clipPanel = session.getClipPanel();
         clip = clipPanel.getClip();
         clipPanel.setRegionMode(true);
     }
 
+    @Override
     public void deactivate() {
         clip = null;
         clipPanel = null;
     }
 
+    @Override
     public JComponent getSettingsPanel() {
         return settingsPanel;
     }

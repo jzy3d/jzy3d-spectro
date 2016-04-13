@@ -40,7 +40,7 @@ class FFT {
 	int     ln, nv2, k, l, le, le1, j, ip, i, n;
 	
 	n = array.length;
-    	ln = (int)( Math.log( (double)n )/Math.log(2) + 0.5 );
+    	ln = (int)( Math.log( n )/Math.log(2) + 0.5 );
     	nv2 = n / 2;
     	j = 1;
  	for (i = 1; i < n; i++ ) {
@@ -62,12 +62,12 @@ class FFT {
 	
  	for (l = 1; l <= ln; l++) {
 	    /* loops thru stages */
-	    le = (int)(Math.exp( (double)l * Math.log(2) ) + 0.5 );
+	    le = (int)(Math.exp( l * Math.log(2) ) + 0.5 );
 	    le1 = le / 2;
 	    u_r = 1.0;
 	    u_i = 0.0;
-	    w_r =  Math.cos( Math.PI / (double)le1 );
-	    w_i = -Math.sin( Math.PI / (double)le1 );
+	    w_r =  Math.cos( Math.PI / le1 );
+	    w_i = -Math.sin( Math.PI / le1 );
 	    for (j = 1; j <= le1; j++) {
 		/* loops thru 1/2 twiddle values per stage */
 		for (i = j; i <= n; i += le) {
@@ -108,7 +108,7 @@ class FFT {
 	fft_1d(fftBuf);
 	printArray(fftBuf);
 	fft_1d(fftBuf);
-	scaleArray(fftBuf, 1.0 / (double) fftBuf.length);
+	scaleArray(fftBuf, 1.0 / fftBuf.length);
 	reverseArray(fftBuf);
 	printArray(fftBuf);
     }

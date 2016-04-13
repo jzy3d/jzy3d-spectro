@@ -45,6 +45,7 @@ public class LogarithmicColorizer implements ValueColorizer {
         
         final CurvedSlider preMultSlider = new CurvedSlider(0.0, 7000.0, 4.0);
         preMultSlider.addChangeListener(new ChangeListener() {
+            @Override
             public void stateChanged(ChangeEvent e) {
                 setPreMult(preMultSlider.getCurvedValue());
             }
@@ -52,6 +53,7 @@ public class LogarithmicColorizer implements ValueColorizer {
 
         final JSlider brightnessSlider = new JSlider(-300, 300, 0);
         brightnessSlider.addChangeListener(new ChangeListener() {
+            @Override
             public void stateChanged(ChangeEvent e) {
                 setBrightness(brightnessSlider.getValue());
             }
@@ -59,6 +61,7 @@ public class LogarithmicColorizer implements ValueColorizer {
 
         final CurvedSlider contrastSlider = new CurvedSlider(0.0, 10000.0, 4.0);
         contrastSlider.addChangeListener(new ChangeListener() {
+            @Override
             public void stateChanged(ChangeEvent e) {
                 setContrast(contrastSlider.getCurvedValue());
             }
@@ -67,6 +70,7 @@ public class LogarithmicColorizer implements ValueColorizer {
         final JCheckBox useRedCheckbox = new JCheckBox("Use red", useRed);
         useRedCheckbox.setOpaque(false);
         useRedCheckbox.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 setUseRed(useRedCheckbox.isSelected());
             }
@@ -86,6 +90,7 @@ public class LogarithmicColorizer implements ValueColorizer {
         contrastSlider.setValue(50);
     }
 
+    @Override
     public int colorFor(double val) {
         int greyVal = (int) (brightness + (contrast * Math.log1p(Math.abs(preMult * val))));
         
@@ -135,6 +140,7 @@ public class LogarithmicColorizer implements ValueColorizer {
         clipPanel.repaint();
     }
 
+    @Override
     public JComponent getSettingsPanel() {
         return settingsPanel;
     }

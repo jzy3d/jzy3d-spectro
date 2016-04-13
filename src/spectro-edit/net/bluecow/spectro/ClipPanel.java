@@ -52,6 +52,11 @@ import javax.swing.undo.UndoableEditSupport;
  */
 public class ClipPanel extends JPanel implements Scrollable {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -8599648327569019217L;
+
     private static final Logger logger = Logger.getLogger(ClipPanel.class.getName());
 
     /**
@@ -97,6 +102,7 @@ public class ClipPanel extends JPanel implements Scrollable {
 
     private ClipDataChangeListener clipDataChangeHandler = new ClipDataChangeListener() {
 
+        @Override
         public void clipDataChanged(ClipDataChangeEvent e) {
             Rectangle r = toScreenCoords(e.getRegion());
             updateImage(r);
@@ -390,6 +396,7 @@ public class ClipPanel extends JPanel implements Scrollable {
         // */
         // Point regionOrigin;
 
+        @Override
         public void mouseDragged(MouseEvent e) {
             switch (mode) {
             case IDLE:
@@ -405,6 +412,7 @@ public class ClipPanel extends JPanel implements Scrollable {
             setRegion(tempRegion);
         }
 
+        @Override
         public void mousePressed(MouseEvent e) {
             tempRegion = normalized(region);
             Point p = e.getPoint();
@@ -418,6 +426,7 @@ public class ClipPanel extends JPanel implements Scrollable {
             setRegion(tempRegion);
         }
 
+        @Override
         public void mouseReleased(MouseEvent e) {
             mode = MouseMode.IDLE;
 
@@ -425,18 +434,22 @@ public class ClipPanel extends JPanel implements Scrollable {
             tempRegion = null;
         }
 
+        @Override
         public void mouseMoved(MouseEvent e) {
             // don't care
         }
 
+        @Override
         public void mouseClicked(MouseEvent e) {
             // don't care
         }
 
+        @Override
         public void mouseEntered(MouseEvent e) {
             // don't care
         }
 
+        @Override
         public void mouseExited(MouseEvent e) {
             // don't care
         }
@@ -485,6 +498,10 @@ public class ClipPanel extends JPanel implements Scrollable {
     }
 
     private final class RegionMoveEdit extends AbstractUndoableEdit {
+        /**
+         * 
+         */
+        private static final long serialVersionUID = 7821532327081642024L;
         private Rectangle oldr;
         private final Rectangle newr = region;
 
@@ -551,6 +568,10 @@ public class ClipPanel extends JPanel implements Scrollable {
      */
     private class ClipPositionHeader extends JPanel implements PlaybackPositionListener {
 
+        /**
+         * 
+         */
+        private static final long serialVersionUID = -5248548864481156145L;
         private PlayerThread playerThread;
         volatile long playbackPosition;
 
@@ -563,6 +584,7 @@ public class ClipPanel extends JPanel implements Scrollable {
             this.playerThread = playerThread;
         }
 
+        @Override
         public void playbackPositionUpdate(PlaybackPositionEvent e) {
             int oldPixelPosition = playbackPixelPosition();
             playbackPosition = e.getSamplePos();
@@ -606,22 +628,27 @@ public class ClipPanel extends JPanel implements Scrollable {
 
     // --------------------- Scrollable interface ------------------------
 
+    @Override
     public Dimension getPreferredScrollableViewportSize() {
         return getPreferredSize();
     }
 
+    @Override
     public int getScrollableBlockIncrement(Rectangle visibleRect, int orientation, int direction) {
         return (int) (visibleRect.width * 0.9);
     }
 
+    @Override
     public int getScrollableUnitIncrement(Rectangle visibleRect, int orientation, int direction) {
         return 50;
     }
 
+    @Override
     public boolean getScrollableTracksViewportHeight() {
         return false;
     }
 
+    @Override
     public boolean getScrollableTracksViewportWidth() {
         return false;
     }

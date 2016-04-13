@@ -24,6 +24,7 @@ public class NullWindowFunction implements WindowFunction {
     /**
      * Doesn't do anything.
      */
+    @Override
     public void applyWindow(double[] data) {
         // noop
     }

@@ -157,6 +157,7 @@ public class SpectroEditSession {
         LogManager.getLogManager().readConfiguration(SpectroEditSession.class.getResourceAsStream("LogManager.properties"));
         final JFrame f = new JFrame("Dummy frame for owning dialogs");
         SwingUtilities.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     FileDialog fd = new FileDialog(f, "Choose a 16-bit WAV or AIFF file");

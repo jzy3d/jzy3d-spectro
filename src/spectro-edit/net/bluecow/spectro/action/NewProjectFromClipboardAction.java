@@ -40,6 +40,11 @@ import sun.misc.HexDumpEncoder;
  */
 public class NewProjectFromClipboardAction extends AbstractAction {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -1627677430239761045L;
+
     public NewProjectFromClipboardAction() {
         super("New Project From Clipboard...");
     }
@@ -48,6 +53,7 @@ public class NewProjectFromClipboardAction extends AbstractAction {
      * Currently just pops up a list of data flavours available for the current
      * clipboard item.
      */
+    @Override
     public void actionPerformed(ActionEvent e) {
         Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
         JList flavourList = new JList(cb.getAvailableDataFlavors());
@@ -74,6 +80,7 @@ public class NewProjectFromClipboardAction extends AbstractAction {
     
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 NewProjectFromClipboardAction a = new NewProjectFromClipboardAction();
                 a.actionPerformed(null);

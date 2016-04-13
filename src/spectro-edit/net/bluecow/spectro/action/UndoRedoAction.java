@@ -26,6 +26,11 @@ import net.bluecow.spectro.UndoManager;
 
 public class UndoRedoAction extends AbstractAction {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 663339951140488844L;
+
     public static UndoRedoAction createUndoInstance(UndoManager undoManager) {
         return new UndoRedoAction(undoManager, true);
     }
@@ -38,6 +43,7 @@ public class UndoRedoAction extends AbstractAction {
     private final UndoManager undoManager;
 
     private ChangeListener undoManagerChangeHandler = new ChangeListener() {
+        @Override
         public void stateChanged(ChangeEvent e) {
             updateEnabledness();
         }
@@ -51,6 +57,7 @@ public class UndoRedoAction extends AbstractAction {
         updateEnabledness();
     }
 
+    @Override
     public void actionPerformed(ActionEvent e) {
         if (undo) {
             if (undoManager.canUndo()) {

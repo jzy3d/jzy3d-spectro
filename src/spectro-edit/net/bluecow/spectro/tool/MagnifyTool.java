@@ -47,6 +47,10 @@ public class MagnifyTool extends AbstractRegionalTool {
 
     SpinnerNumberModel freqModel = new SpinnerNumberModel(1024, 128, Integer.MAX_VALUE, 1) {
         
+        /**
+         * 
+         */
+        private static final long serialVersionUID = -4426276344697000839L;
         private int currentPowerOfTwo = 10;
         
         @Override
@@ -65,6 +69,12 @@ public class MagnifyTool extends AbstractRegionalTool {
     private final Box settingsPanel;
     
     private final Action magnifyAction = new AbstractAction("Magnify") {
+        /**
+         * 
+         */
+        private static final long serialVersionUID = 8728470739933359338L;
+
+        @Override
         public void actionPerformed(java.awt.event.ActionEvent e) { showMagDialog(); }
     };
     
@@ -94,10 +104,12 @@ public class MagnifyTool extends AbstractRegionalTool {
         magnifyAction.setEnabled(region != null);
     }
     
+    @Override
     public String getName() {
         return "Magnify";
     }
 
+    @Override
     public JComponent getSettingsPanel() {
         return settingsPanel;
     }

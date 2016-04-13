@@ -27,6 +27,11 @@ import javax.swing.JSlider;
 public class CurvedSlider extends JSlider {
 
     /**
+     * 
+     */
+    private static final long serialVersionUID = -3091946584055770804L;
+
+    /**
      * Number of steps the jslider has. Its range is 0..RESOLUTION.
      */
     private static final int RESOLUTION = 100;
