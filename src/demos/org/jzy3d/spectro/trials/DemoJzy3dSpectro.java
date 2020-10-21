@@ -7,7 +7,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 
 import net.bluecow.spectro.Clip;
 
-import org.jzy3d.analysis.AbstractAnalysis;
+import org.jzy3d.analysis.AWTAbstractAnalysis;
 import org.jzy3d.analysis.AnalysisLauncher;
 import org.jzy3d.chart.Chart;
 import org.jzy3d.chart.factories.AWTChartComponentFactory;
@@ -25,7 +25,7 @@ import org.jzy3d.spectro.primitives.SpectrumSurface;
  * 
  * @author Martin Pernollet
  */
-public class DemoJzy3dSpectro extends AbstractAnalysis {
+public class DemoJzy3dSpectro extends AWTAbstractAnalysis {
     public static void main(String[] args) throws Exception {
         AnalysisLauncher.open(new DemoJzy3dSpectro());
     }
