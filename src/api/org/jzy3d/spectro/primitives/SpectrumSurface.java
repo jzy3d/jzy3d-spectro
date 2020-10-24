@@ -7,6 +7,7 @@ import org.jzy3d.colors.colormaps.ColorMapRainbow;
 import org.jzy3d.maths.BoundingBox3d;
 import org.jzy3d.maths.Range;
 import org.jzy3d.painters.GLES2CompatUtils;
+import org.jzy3d.painters.Painter;
 import org.jzy3d.plot3d.primitives.AbstractGeometry;
 
 import com.jogamp.opengl.GL;
@@ -84,7 +85,7 @@ public class SpectrumSurface extends AbstractGeometry {
 
     /** drawing polygons from spectrum values directly */
     @Override
-    public void callPointsForFaceGL2(GL gl) {
+    public void callPointsForFaceGL2(Painter painter, GL gl) {
         for (int framId = 0; framId < frameCount - 1; framId++) {
             int frameMax = Math.min(spectrum.getFrameWidth() - 1, frameWidth);
             for (int freqId = 0; freqId < frameMax; freqId++) {
@@ -135,7 +136,7 @@ public class SpectrumSurface extends AbstractGeometry {
 
     /** no wireframe */
     @Override
-    public void callPointsForWireframeGL2(GL gl) {
+    public void callPointForWireframe(Painter painter, GL gl) {
     }
 
     /* UTILS */
