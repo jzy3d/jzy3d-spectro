@@ -85,16 +85,16 @@ public class SpectrumSurface extends AbstractGeometry {
 
     /** drawing polygons from spectrum values directly */
     @Override
-    public void callPointsForFaceGL2(Painter painter, GL gl) {
+    public void callPointsForFace(Painter painter, GL gl) {
         for (int framId = 0; framId < frameCount - 1; framId++) {
             int frameMax = Math.min(spectrum.getFrameWidth() - 1, frameWidth);
             for (int freqId = 0; freqId < frameMax; freqId++) {
-                drawPolygon(gl, spectrum, framId, freqId);
+                drawPolygon(painter, gl, spectrum, framId, freqId);
             }
         }
     }
 
-    protected void drawPolygon(GL gl, SpectrumModel spectrum, int frameId, int freqId) {
+    protected void drawPolygon(Painter painter, GL gl, SpectrumModel spectrum, int frameId, int freqId) {
         float x0 = frameId;
         float x1 = frameId + 1;
         float y0 = adaptY(freqId);
@@ -104,23 +104,22 @@ public class SpectrumSurface extends AbstractGeometry {
         float zX1Y1 = adaptZ(spectrum.getEnergy(frameId+1, freqId + 1));
         float zX0Y1 = adaptZ(spectrum.getEnergy(frameId, freqId + 1));
 
-        callPolygonPoints(gl, x0, x1, y0, y1, zX0Y0, zX1Y0, zX1Y1, zX0Y1);
+        callPolygonPoints(painter, gl, x0, x1, y0, y1, zX0Y0, zX1Y0, zX1Y1, zX0Y1);
     }
 
-    protected void callPolygonPoints(GL gl, float x0, float x1, float y0, float y1, float zX0Y0, float zX1Y0, float zX1Y1, float zX0Y1) {
+    protected void callPolygonPoints(Painter painter, GL gl, float x0, float x1, float y0, float y1, float zX0Y0, float zX1Y0, float zX1Y1, float zX0Y1) {
         begin(gl);
         if (mapper != null) {
-            call(gl, mapper.getColor(zX0Y0));
+        	painter.color(mapper.getColor(zX0Y0));
         } else {
-            call(gl, Color.BLACK);
+        	painter.color(Color.BLACK);
         }
 
-        GL2 gl2 = gl.getGL2();
-        gl2.glVertex3f(x0, y0, zX0Y0);
-        gl2.glVertex3f(x1, y0, zX1Y0);
-        gl2.glVertex3f(x1, y1, zX1Y1);
-        gl2.glVertex3f(x0, y1, zX0Y1);
-        end(gl);
+        painter.glVertex3f(x0, y0, zX0Y0);
+        painter.glVertex3f(x1, y0, zX1Y0);
+        painter.glVertex3f(x1, y1, zX1Y1);
+        painter.glVertex3f(x0, y1, zX0Y1);
+        painter.glEnd();
     }
 
     protected float adaptY(int value) {
