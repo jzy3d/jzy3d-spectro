@@ -71,7 +71,7 @@ public class SpectrumSurface extends AbstractGeometry {
     }
 
     @Override
-    protected void begin(GL gl) {
+    protected void begin(Painter painter, GL gl) {
         if (gl.isGL2()) {
             gl.getGL2().glBegin(geometry());
         } else {
@@ -108,7 +108,7 @@ public class SpectrumSurface extends AbstractGeometry {
     }
 
     protected void callPolygonPoints(Painter painter, GL gl, float x0, float x1, float y0, float y1, float zX0Y0, float zX1Y0, float zX1Y1, float zX0Y1) {
-        begin(gl);
+        begin(painter, gl);
         if (mapper != null) {
         	painter.color(mapper.getColor(zX0Y0));
         } else {
