@@ -10,7 +10,7 @@ import net.bluecow.spectro.Clip;
 import org.jzy3d.analysis.AWTAbstractAnalysis;
 import org.jzy3d.analysis.AnalysisLauncher;
 import org.jzy3d.chart.Chart;
-import org.jzy3d.chart.factories.AWTChartComponentFactory;
+import org.jzy3d.chart.factories.AWTChartFactory;
 import org.jzy3d.plot3d.primitives.axes.layout.IAxeLayout;
 import org.jzy3d.plot3d.primitives.axes.layout.renderers.ElapsedTimeTickRenderer;
 import org.jzy3d.plot3d.rendering.canvas.Quality;
@@ -42,7 +42,7 @@ public class DemoJzy3dSpectro extends AWTAbstractAnalysis {
         surface.setWireframeDisplayed(false);
 
         // Create a chart with time and frequency axes
-        chart = AWTChartComponentFactory.chart(Quality.Advanced);
+        chart = AWTChartFactory.chart(Quality.Advanced);
         chart.getScene().getGraph().add(surface);
         //make2d(chart);
     }
