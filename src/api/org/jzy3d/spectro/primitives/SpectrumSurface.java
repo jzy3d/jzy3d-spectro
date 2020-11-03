@@ -8,7 +8,7 @@ import org.jzy3d.maths.BoundingBox3d;
 import org.jzy3d.maths.Range;
 import org.jzy3d.painters.GLES2CompatUtils;
 import org.jzy3d.painters.Painter;
-import org.jzy3d.plot3d.primitives.AbstractGeometry;
+import org.jzy3d.plot3d.primitives.Geometry;
 
 import com.jogamp.opengl.GL;
 import com.jogamp.opengl.GL2;
@@ -20,7 +20,7 @@ import com.jogamp.opengl.GL2;
  * 
  * @author Martin Pernollet
  */
-public class SpectrumSurface extends AbstractGeometry {
+public class SpectrumSurface extends Geometry {
     /**
      * The total frequency range covered by a frame always matches the frequency
      * range of the input samples, which according to the Nyquist theorem is 1/2
