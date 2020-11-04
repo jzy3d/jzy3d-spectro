@@ -11,7 +11,7 @@ import org.jzy3d.analysis.AWTAbstractAnalysis;
 import org.jzy3d.analysis.AnalysisLauncher;
 import org.jzy3d.chart.Chart;
 import org.jzy3d.chart.factories.AWTChartFactory;
-import org.jzy3d.plot3d.primitives.axes.layout.IAxeLayout;
+import org.jzy3d.plot3d.primitives.axes.layout.IAxisLayout;
 import org.jzy3d.plot3d.primitives.axes.layout.renderers.ElapsedTimeTickRenderer;
 import org.jzy3d.plot3d.rendering.canvas.Quality;
 import org.jzy3d.plot3d.rendering.view.ViewportMode;
@@ -48,10 +48,10 @@ public class DemoJzy3dSpectro extends AWTAbstractAnalysis {
     }
 
     public void axeLabels(Chart chart) {
-        IAxeLayout axe = chart.getAxeLayout();
-        axe.setXAxeLabel("time");
-        axe.setYAxeLabel("freq");
-        axe.setZAxeLabel("cos");
+        IAxisLayout axe = chart.getAxeLayout();
+        axe.setXAxisLabel("time");
+        axe.setYAxisLabel("freq");
+        axe.setZAxisLabel("cos");
         
         axe.setXTickRenderer(new ElapsedTimeTickRenderer());
         //axe.setYAxeLabel("note");
