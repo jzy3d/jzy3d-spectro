@@ -9,8 +9,6 @@ import org.jzy3d.maths.Range;
 import org.jzy3d.painters.Painter;
 import org.jzy3d.plot3d.primitives.Geometry;
 
-import com.jogamp.opengl.GL2;
-
 /**
  * A drawable spectrum.
  * 
@@ -71,11 +69,7 @@ public class SpectrumSurface extends Geometry {
 
 	@Override
 	protected void begin(Painter painter) {
-		painter.glBegin(geometry());
-	}
-
-	protected int geometry() {
-		return GL2.GL_POLYGON;
+		painter.glBegin_Polygon();
 	}
 
 	/** drawing polygons from spectrum values directly */
