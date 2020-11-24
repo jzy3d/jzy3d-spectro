@@ -48,7 +48,7 @@ public class DemoJzy3dSpectro extends AWTAbstractAnalysis {
     }
 
     public void axeLabels(Chart chart) {
-        IAxisLayout axe = chart.getAxeLayout();
+        IAxisLayout axe = chart.getAxisLayout();
         axe.setXAxisLabel("time");
         axe.setYAxisLabel("freq");
         axe.setZAxisLabel("cos");
