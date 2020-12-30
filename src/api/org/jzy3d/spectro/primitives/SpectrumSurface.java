@@ -6,7 +6,7 @@ import org.jzy3d.colors.ColorMapper;
 import org.jzy3d.colors.colormaps.ColorMapRainbow;
 import org.jzy3d.maths.BoundingBox3d;
 import org.jzy3d.maths.Range;
-import org.jzy3d.painters.Painter;
+import org.jzy3d.painters.IPainter;
 import org.jzy3d.plot3d.primitives.Geometry;
 
 /**
@@ -68,13 +68,13 @@ public class SpectrumSurface extends Geometry {
 	}
 
 	@Override
-	protected void begin(Painter painter) {
+	protected void begin(IPainter painter) {
 		painter.glBegin_Polygon();
 	}
 
 	/** drawing polygons from spectrum values directly */
 	@Override
-	public void callPointsForFace(Painter painter) {
+	public void callPointsForFace(IPainter painter) {
 		for (int framId = 0; framId < frameCount - 1; framId++) {
 			int frameMax = Math.min(spectrum.getFrameWidth() - 1, frameWidth);
 			for (int freqId = 0; freqId < frameMax; freqId++) {
@@ -83,7 +83,7 @@ public class SpectrumSurface extends Geometry {
 		}
 	}
 
-	protected void drawPolygon(Painter painter, SpectrumModel spectrum, int frameId, int freqId) {
+	protected void drawPolygon(IPainter painter, SpectrumModel spectrum, int frameId, int freqId) {
 		float x0 = frameId;
 		float x1 = frameId + 1;
 		float y0 = adaptY(freqId);
@@ -96,7 +96,7 @@ public class SpectrumSurface extends Geometry {
 		callPolygonPoints(painter, x0, x1, y0, y1, zX0Y0, zX1Y0, zX1Y1, zX0Y1);
 	}
 
-	protected void callPolygonPoints(Painter painter, float x0, float x1, float y0, float y1, float zX0Y0, float zX1Y0,
+	protected void callPolygonPoints(IPainter painter, float x0, float x1, float y0, float y1, float zX0Y0, float zX1Y0,
 			float zX1Y1, float zX0Y1) {
 		begin(painter);
 		if (mapper != null) {
@@ -125,7 +125,7 @@ public class SpectrumSurface extends Geometry {
 
 	/** no wireframe */
 	@Override
-	public void callPointForWireframe(Painter painter) {
+	public void callPointForWireframe(IPainter painter) {
 	}
 
 	/* UTILS */
