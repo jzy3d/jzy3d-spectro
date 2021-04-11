@@ -16,7 +16,6 @@ package net.bluecow.spectro;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.Box;
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;
@@ -24,7 +23,6 @@ import javax.swing.JLabel;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-
 import net.bluecow.spectro.tool.CurvedSlider;
 
 public class LogarithmicColorizer implements ValueColorizer {

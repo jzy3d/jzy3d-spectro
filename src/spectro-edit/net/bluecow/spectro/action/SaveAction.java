@@ -20,13 +20,11 @@ import java.awt.FileDialog;
 import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.io.File;
-
 import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioSystem;
 import javax.swing.AbstractAction;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
-
 import net.bluecow.spectro.Clip;
 
 public class SaveAction extends AbstractAction {

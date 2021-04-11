@@ -2,9 +2,7 @@ package org.jzy3d.spectro.trials;
 
 import java.io.File;
 import java.io.IOException;
-
 import javax.sound.sampled.UnsupportedAudioFileException;
-
 import org.jzy3d.analysis.AWTAbstractAnalysis;
 import org.jzy3d.analysis.AnalysisLauncher;
 import org.jzy3d.chart.Chart;
@@ -15,7 +13,6 @@ import org.jzy3d.plot3d.rendering.canvas.Quality;
 import org.jzy3d.plot3d.rendering.view.ViewportMode;
 import org.jzy3d.plot3d.rendering.view.modes.ViewPositionMode;
 import org.jzy3d.spectro.primitives.SpectrumSurface;
-
 import net.bluecow.spectro.Clip;
 
 /**

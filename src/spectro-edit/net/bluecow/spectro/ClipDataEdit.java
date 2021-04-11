@@ -17,7 +17,6 @@ package net.bluecow.spectro;
 import java.awt.Rectangle;
 import java.util.Arrays;
 import java.util.logging.Logger;
-
 import javax.swing.undo.AbstractUndoableEdit;
 import javax.swing.undo.CannotRedoException;
 import javax.swing.undo.CannotUndoException;

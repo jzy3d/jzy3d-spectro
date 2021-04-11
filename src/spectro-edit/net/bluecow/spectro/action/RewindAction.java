@@ -15,9 +15,7 @@
 package net.bluecow.spectro.action;
 
 import java.awt.event.ActionEvent;
-
 import javax.swing.AbstractAction;
-
 import net.bluecow.spectro.PlayerThread;
 
 public class RewindAction extends AbstractAction {

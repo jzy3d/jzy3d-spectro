@@ -22,13 +22,11 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-
 import net.bluecow.spectro.ClipPanel;
 import net.bluecow.spectro.MemoryMonitor;
 import net.bluecow.spectro.PositionReadout;

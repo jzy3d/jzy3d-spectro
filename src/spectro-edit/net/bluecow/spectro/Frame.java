@@ -19,7 +19,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import edu.emory.mathcs.jtransforms.dct.DoubleDCT_1D;
 
 /**

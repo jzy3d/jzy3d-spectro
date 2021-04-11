@@ -15,12 +15,10 @@
 package net.bluecow.spectro.action;
 
 import java.awt.event.ActionEvent;
-
 import javax.swing.AbstractAction;
 import javax.swing.SwingUtilities;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-
 import net.bluecow.spectro.PlayerThread;
 
 public class PlayPauseAction extends AbstractAction {

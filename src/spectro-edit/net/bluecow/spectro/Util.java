@@ -18,7 +18,6 @@ import java.awt.Component;
 import java.awt.Dialog;
 import java.awt.Frame;
 import java.awt.Window;
-
 import javax.swing.JDialog;
 import javax.swing.SwingUtilities;
 

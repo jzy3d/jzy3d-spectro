@@ -27,7 +27,6 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
-
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JFrame;
@@ -36,7 +35,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 import javax.swing.JToolBar;
 import javax.swing.SwingUtilities;
-
 import net.bluecow.spectro.action.PlayPauseAction;
 import net.bluecow.spectro.action.RewindAction;
 import net.bluecow.spectro.action.SaveAction;

@@ -16,7 +16,6 @@ package net.bluecow.spectro.tool;
 
 import java.awt.Color;
 import java.awt.Rectangle;
-
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.Box;
@@ -27,7 +26,6 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
-
 import net.bluecow.spectro.Clip;
 import net.bluecow.spectro.ClipPanel;
 import net.bluecow.spectro.Util;

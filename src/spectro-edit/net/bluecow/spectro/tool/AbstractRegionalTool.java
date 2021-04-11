@@ -17,7 +17,6 @@ package net.bluecow.spectro.tool;
 import java.awt.Rectangle;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-
 import net.bluecow.spectro.Clip;
 import net.bluecow.spectro.ClipPanel;
 import net.bluecow.spectro.SpectroEditSession;

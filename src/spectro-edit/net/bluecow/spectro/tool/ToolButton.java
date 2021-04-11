@@ -17,7 +17,6 @@ package net.bluecow.spectro.tool;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.net.URL;
-
 import javax.swing.ButtonGroup;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;

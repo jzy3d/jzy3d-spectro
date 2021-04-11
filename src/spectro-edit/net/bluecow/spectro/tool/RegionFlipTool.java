@@ -17,11 +17,9 @@ package net.bluecow.spectro.tool;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JComponent;
-
 import net.bluecow.spectro.Clip;
 import net.bluecow.spectro.ClipPanel;
 import net.bluecow.spectro.Frame;

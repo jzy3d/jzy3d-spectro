@@ -1,7 +1,6 @@
 package org.jzy3d.spectro.trials;
 
 import org.jzy3d.spectro.primitives.SpectrumModel;
-
 import net.bluecow.spectro.Clip;
 
 public class SpectrumModelSpectro implements SpectrumModel {

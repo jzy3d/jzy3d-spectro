@@ -17,14 +17,12 @@ package net.bluecow.spectro.tool;
 import java.awt.Rectangle;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-
 import javax.swing.Box;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-
 import net.bluecow.spectro.Clip;
 import net.bluecow.spectro.ClipDataEdit;
 import net.bluecow.spectro.ClipPanel;
