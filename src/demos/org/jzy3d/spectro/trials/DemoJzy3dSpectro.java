@@ -40,7 +40,7 @@ public class DemoJzy3dSpectro extends AWTAbstractAnalysis {
     surface.setWireframeDisplayed(false);
 
     // Create a chart with time and frequency axes
-    chart = AWTChartFactory.chart(Quality.Advanced);
+    chart = AWTChartFactory.chart(Quality.Advanced());
     chart.getScene().getGraph().add(surface);
     // make2d(chart);
   }
